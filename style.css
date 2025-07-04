@@ -6,32 +6,54 @@ body {
     font-style: normal;
 }
 
+/* hero */
 header {
     position: fixed;
     width: 100%;
     color: white;
-    top: 15px;
+    top: 40px;
+    z-index: 100;
 }
 
 a {
     text-decoration: none;
     color: white;
 }
-
+#hero {
+    position: relative;
+    z-index: 50;
+    background: black;
+    background-image: url(images/hero-bg.svg);
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+}
+.m {
+    
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+}
 .header {
-    padding: 10px 15px;
-    border-radius: 30px;
-    background-color: #181818;
+    padding: 10px 20px;
+    border-radius: 100px;
+    background-color: #ffffff33;
     color: white;
     text-align: center;
     align-items: center;
     justify-content: center;
     justify-content: space-between;
+    backdrop-filter: blur(16px);
+    box-shadow: inset 0px 0px 2px 0px #18181800;
+    border: .5px solid #ffffff30;
 }
 
 .nav-bar {
     gap: 31px;
     display: flex;
+    z-index: 100;
 }
 
 nav {
@@ -47,9 +69,16 @@ nav {
 .header span {
     background-color: white;
     color: black;
-    padding: 5px 30px;
+    padding: 5px 25px;
     border-radius: 20px;
+    position: relative;
+    left: 10px;
 }
+
+#hero {
+    height: 100%;
+}
+
 .content {
     position: relative;
     color: white;
@@ -59,49 +88,486 @@ nav {
     justify-content: center;
 }
 
-.m {
-    background-image: url(images/hero-bg.svg);
-    width: 100vw;
-    height: 100vh;
-    background-repeat: no-repeat;
+
+.text {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    animation: flip-text 5s infinite;
+
 }
-.h-one{
-    font-weight: 700;
+
+
+
+.h-one {
+    font-weight: 800;
+    margin-bottom: 50px;
 }
-.h-two{
+
+.h-two {
     font-weight: 500;
-    background: linear-gradient(45deg, #33BC8D, #7EBD20);
+    background: linear-gradient(45deg, #37BB86, #bbac21, #BB6E21);
     color: transparent;
     background-clip: text;
-}
-.say-hello{
-    border: 2px solid;
-    display: inline;
-    padding: 5px 20px;
-    border-radius: 10px;
-    background: linear-gradient(45deg, rgb(225, 255, 225), rgb(255, 174, 174));
-    color: transparent;
-    background-clip: text;
-    width: max-content;
 }
 
-.gradient-border{
-    position: relative;
+.border-gradient {
     display: inline-block;
-    background: linear-gradient(to right, rgb(0, 255, 140) , rgb(0, 36, 0));
-    overflow: hidden;
-    box-shadow: inset 0 0 20px rgba(0,0,0, 0.5);
+    padding: 2px;
+    border-radius: 10px;
+    background: linear-gradient(to top, #34BB88, #234B00, #7EBD20);
+    width: fit-content;
+    position: absolute;
+    bottom: 100px;
+}
+
+.glow-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: black;
+    padding: 5px 20px;
+}
+
+.glow-text {
+    background: linear-gradient(to right, #34BB88, #7EBD20);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
 }
 
 
-.gradient-border::before{
-    /* content: "";
+
+.social-media {
     position: absolute;
+    bottom: 80px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    right: 0px;
+}
+
+.hero-bottom {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    background-color: #181818;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    gap: 50px;
+    width: 100vw;
+    color: #ffffff47;
+    padding: 15px;
+    font-family: "Anonymous Pro", monospace;
+    font-size: larger;
+}
+
+.hero-bottom p {
+    margin: 0;
+}
+
+.h-one {
+    margin-bottom: 50px;
+}
+
+
+/* about */
+
+.about {
+    background-color: #181818;
+    color: white;
+    margin-top: 50px;
+    border-radius: 50px;
+    padding: 80px 50px 80px 250px;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.green-img {
+    position: absolute;
+    width: 348px;
+    height: 348px;
+    left: 0px;
+    top: 132px;
+}
+
+.qstion-mark {
+    height: 83px;
+    width: 200px;
+    margin-right: 55px;
+    position: relative;
+    top: 7px;
+}
+
+.about h1 {
+    max-width: 500px;
+    font-weight: 800;
+}
+
+.abt-one {
+    background-color: #181818;
+    color: white;
+    padding: 20px;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    max-width: 900px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.abt-one h3,
+.abt-one p {
+    width: fit-content;
+    justify-self: center;
+
+}
+
+.abt-two {
+    background-color: #181818;
+    color: white;
+    padding: 20px;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    max-width: 900px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.about-p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    justify-content: flex-start;
+    padding-left: 30px;
+}
+
+.about-h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    justify-content: flex-end;
+    padding-right: 30px;
+}
+
+.abt-one-img {
+    width: 100px;
+    height: 100px;
+    rotate: 240deg;
+    position: absolute;
+    right: -12px;
+    bottom: -18px;
+}
+
+.abt-two-img {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    rotate: 75deg;
+    top: -10px;
+    left: -10px;
+}
+
+.br-line {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    justify-self: center;
+}
+
+/* skills */
+
+
+#skills h1 {
+    font-weight: 700;
+    color: white;
+    justify-self: center;
+}
+
+
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: x-large;
+    width: 100%;
+}
+.skills .one {
+    background-color: #181818;
+    padding: 20px 50px;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 50px;
+}
+.skills .two {
+    background-color: #181818;
+    padding: 20px 50px;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 50px;
+}
+.skills .three {
+    background-color: #181818;
+    padding: 20px 50px;
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+        border-radius: 50px;
+}
+.skills .four {
+    background-color: #181818;
+    padding: 20px 50px;
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    border-radius: 50px;
+}
+.skills .five {
+    background-color: #181818;
+    padding: 20px 50px;
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+        border-radius: 50px;
+}
+.skills .six {
+    background-color: #181818;
+    padding: 20px 50px;
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    border-radius: 50px;
+}
+
+
+
+
+
+
+
+
+.skills-img1 img {
+    width: 300px;
+    position: fixed;
     left: 0;
     top: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(to right, orange, green, blue);
-    box-shadow: inset 0 0 20px rgba(0,0,0, 0.5);
-    z-index: 1; */
+    z-index: -1;
+
 }
+
+.skills-img2 img {
+    width: 300px;
+    height: auto;
+    position: fixed;
+    right: 0;
+    rotate: 180deg;
+    bottom: 0;
+    z-index: -1;
+}
+
+#skills {
+    position: relative;
+}
+
+
+/* tools */
+#tools h1 {
+    color: white;
+    font-weight: 700;
+    justify-self: center;
+}
+
+.tools {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tools-img {
+    padding: 20px 20px;
+    background-color: #181818;
+    width: fit-content;
+    border-radius: 30px;
+}
+
+/* projects */
+#projects {
+    position: relative;
+}
+
+#projects h1 {
+    color: white;
+    font-weight: 700;
+    justify-self: center;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
+    height: 400px;
+    margin-bottom: 150px;
+}
+
+.div1 {
+    grid-column: span 5 / span 5;
+    grid-row: span 5 / span 5;
+    background-color: #181818;
+    border-radius: 30px;
+}
+
+.div2 {
+    grid-column: span 3 / span 3;
+    grid-row: span 2 / span 2;
+    grid-column-start: 6;
+    background-color: #181818;
+    border-radius: 30px;
+}
+
+.div3 {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-column-start: 9;
+    background-color: #181818;
+    border-radius: 30px;
+}
+
+.div4 {
+    grid-column: span 2 / span 2;
+    grid-row: span 3 / span 3;
+    grid-column-start: 11;
+    background-color: #181818;
+    border-radius: 30px;
+}
+
+.div5 {
+    grid-column: span 5 / span 5;
+    grid-row: span 3 / span 3;
+    grid-column-start: 6;
+    grid-row-start: 3;
+    background-color: #181818;
+    border-radius: 30px;
+}
+
+.div7 {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-column-start: 11;
+    grid-row-start: 4;
+    background-color: #181818;
+    border-radius: 30px;
+}
+
+.view-more {
+    display: inline-block;
+    padding: 2px;
+    border-radius: 10px;
+    background: linear-gradient(to top, #34BB88, #234B00, #7EBD20);
+    width: fit-content;
+    position: absolute;
+    bottom: 100px;
+    display: flex;
+    justify-self: center;
+}
+
+/* get on touch */
+
+#get-in-touch h1 {
+    color: white;
+    font-weight: 700;
+    justify-self: center;
+}
+
+.get-in-touch {
+    color: white;
+
+}
+
+.details {
+    background-color: #181818;
+    height: 100%;
+    padding: 30px;
+    border-radius: 50px;
+}
+
+.name {
+    padding: 20px;
+    background-color: black;
+    margin-bottom: 30px;
+    border-radius: 30px;
+
+}
+
+.email {
+    padding: 20px;
+    background-color: black;
+    margin-bottom: 30px;
+    border-radius: 30px;
+}
+
+.type-here {
+    padding: 10px 10px 50px 10px;
+    background-color: black;
+    border-radius: 30px;
+}
+
+.call {
+    margin-bottom: 20px;
+    margin-top: 100px;
+}
+
+.call img {
+    margin-right: 20px;
+}
+
+.mail img {
+    margin-right: 20px;
+}
+
+/* footer */
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+.footer-sm {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.line-one {
+    height: 1px;
+    background-color: white;
+    width: 500px;
+    opacity: 50%;
+}
+
+.line-two {
+    height: 1px;
+    background-color: white;
+    width: 500px;
+    right: 0;
+    opacity: 50%;
+}
+
+.haash {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
